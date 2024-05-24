@@ -17,7 +17,6 @@ import {
 } from "react-native-paper";
 import { useThemeStore } from "@/store/theme";
 
-
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -60,21 +59,18 @@ export default function RootLayout() {
   }
 
   return (
-
-      <GestureHandlerRootView>
-        <PaperProvider
-          theme={theme === "light" ? CombinedDefaultTheme : CombinedDarkTheme}
-          settings={{
-            rippleEffectEnabled: true,
-
-          }}>
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
-            <Stack.Screen name="+not-found" />
-          </Stack>
-        </PaperProvider>
-      </GestureHandlerRootView>
-
+    <GestureHandlerRootView>
+      <PaperProvider
+        theme={theme === "light" ? CombinedDefaultTheme : CombinedDarkTheme}
+        settings={{
+          rippleEffectEnabled: true,
+        }}>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+      </PaperProvider>
+    </GestureHandlerRootView>
   );
 }

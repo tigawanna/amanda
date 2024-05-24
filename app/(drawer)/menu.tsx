@@ -1,27 +1,19 @@
-import { useThemeStore } from "@/store/theme";
-import { Link } from "expo-router";
-import { View, Text, StyleSheet } from "react-native";
-import { Switch, useTheme } from "react-native-paper";
-export default function menu() {
-  const themeStore = useThemeStore();
-  const { colors } = useTheme();
+import { MenuScreen } from "@/components/screens/MenuScreen";
+import { View, StyleSheet } from "react-native";
 
+export default function menu() {
   return (
-    <View style={{
-        backgroundColor: colors.primary,
-        height: "100%",
-    }}>
-      <Switch
-        value={themeStore.theme === "dark"}
-        onValueChange={() => themeStore.toggle("theme")}
-      />
-      <Text>{themeStore.theme}</Text>
+    <View style={styles.container}>
+      <MenuScreen />
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+    height: "100%",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

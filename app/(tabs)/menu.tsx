@@ -1,17 +1,10 @@
-import { useThemeStore } from "@/store/theme";
-import { View, Text, StyleSheet } from "react-native";
-import { Switch, useTheme } from "react-native-paper";
-export default function menu() {
-  const themeStore = useThemeStore();
-  const { colors } = useTheme();
+import { MenuScreen } from "@/components/screens/MenuScreen";
+import { View,StyleSheet } from "react-native";
 
+export default function menu() {
   return (
     <View style={styles.container}>
-      <Switch
-        value={themeStore.theme === "dark"}
-        onValueChange={() => themeStore.toggle("theme")}
-      />
-      <Text>{themeStore.theme}</Text>
+      <MenuScreen />
     </View>
   );
 }

@@ -1,7 +1,7 @@
 import { useThemeStore } from "@/store/theme";
 import { Ionicons } from "@expo/vector-icons";
-import { View, Text } from "react-native";
-
+import { View} from "react-native";
+import { Text } from 'react-native-paper';
 import { Switch, useTheme } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 export default function Settings() {
@@ -26,7 +26,7 @@ export default function Settings() {
                 color={colors.primary}
               />
             </View>
-            <Text>Theme</Text>
+            <Text variant="titleLarge">Theme</Text>
             <Switch
               value={themeStore.theme === "dark"}
               onValueChange={() => themeStore.toggle("theme")}
