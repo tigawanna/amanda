@@ -4,8 +4,10 @@ import { View, StyleSheet } from "react-native";
 export default function menu() {
   return (
     <View style={styles.container}>
+
       <MenuScreen />
     </View>
+
   );
 }
 const styles = StyleSheet.create({

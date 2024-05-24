@@ -1,14 +1,26 @@
 import Settings from "@/components/screens/Settings";
-import { View } from "react-native";
+import { View,StyleSheet } from "react-native";
+import { useTheme } from "react-native-paper";
 
 
-import { SafeAreaView } from "react-native-safe-area-context";
+
 export default function settings() {
+  const { colors } = useTheme();
   return (
-
-      <View style={{ height: "100%" }}>
-        <Settings />
-      </View>
-
+    <View style={{ ...styles.container, backgroundColor: colors.surface }}>
+    <View style={{ ...styles.container }}>
+      <Settings />
+    </View>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+  },
+});

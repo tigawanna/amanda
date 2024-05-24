@@ -1,10 +1,12 @@
 import Settings from "@/components/screens/Settings";
 import { View,StyleSheet } from "react-native";
+import { useTheme } from "react-native-paper";
 
-import { Switch, useTheme } from "react-native-paper";
+
 export default function settings() {
+  const { colors } = useTheme();
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container, backgroundColor: colors.surface }}>
       <Settings />
     </View>
   );
