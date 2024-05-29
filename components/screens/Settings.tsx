@@ -11,6 +11,8 @@ export default function Settings() {
     <SafeAreaView>
       <View style={{ height: "100%",width:"100%",gap:10,paddingTop:"10%" }}>
         {/* Them settings */}
+
+
         <View style={{ paddingHorizontal:"5%",paddingVertical:"2%", width: "100%", backgroundColor: colors.elevation.level2 }}>
           <View
             style={{
@@ -22,31 +24,7 @@ export default function Settings() {
             }}>
             <View style={{ flexDirection: "column", alignItems: "flex-start", gap: 2 }}>
               <Ionicons
-                name={themeStore.theme === "dark" ? "sunny" : "moon"}
-                size={28}
-                color={colors.primary}
-              />
-            </View>
-            <Text variant="titleLarge">Theme</Text>
-            <Switch
-              value={themeStore.theme === "dark"}
-              onValueChange={() => themeStore.toggle("theme")}
-            />
-          </View>
-        </View>
-        {/* preferences */}
-        <View style={{ paddingHorizontal:"5%",paddingVertical:"2%", width: "100%", backgroundColor: colors.elevation.level2 }}>
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 8,
-              width: "100%",
-            }}>
-            <View style={{ flexDirection: "column", alignItems: "flex-start", gap: 2 }}>
-              <Ionicons
-                name={themeStore.theme === "dark" ? "sunny" : "moon"}
+                name={themeStore.theme === "light" ? "sunny" : "moon"}
                 size={28}
                 color={colors.primary}
               />
