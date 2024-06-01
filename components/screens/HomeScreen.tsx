@@ -8,7 +8,41 @@ export function HomeScreen() {
   const { colors } = useTheme();
   return (
     <View style={{ ...styles.container, backgroundColor: colors.surface }}>
-      <View style={{ width: "100%", padding: 10,flexWrap:"wrap" }}>
+      <View style={{ width: "100%", padding: 10,flexDirection:"row",flexWrap:"wrap",flex:1,gap:10}}>
+        <Card style={{ flex: 1 }}>
+          <Card.Title
+            title="Card Title"
+            subtitle="Card Subtitle"
+            left={(props) => <Avatar.Icon {...props} icon="folder" />}
+          />
+          <Card.Content>
+            <Text variant="titleLarge">Card title</Text>
+            <Text variant="bodyMedium">Card content</Text>
+          </Card.Content>
+        
+          <Card.Cover source={{ uri: "/assets/images/cards.png" }} />
+          <Card.Actions>
+            <Button>Cancel</Button>
+            <Button>Ok</Button>
+          </Card.Actions>
+        </Card>
+        <Card style={{ flex: 1 }}>
+          <Card.Title
+            title="Card Title"
+            subtitle="Card Subtitle"
+            left={(props) => <Avatar.Icon {...props} icon="folder" />}
+          />
+          <Card.Content>
+            <Text variant="titleLarge">Card title</Text>
+            <Text variant="bodyMedium">Card content</Text>
+          </Card.Content>
+        
+          <Card.Cover source={{ uri: "/assets/images/cards.png" }} />
+          <Card.Actions>
+            <Button>Cancel</Button>
+            <Button>Ok</Button>
+          </Card.Actions>
+        </Card>
         <Card>
           <Card.Title
             title="Card Title"
@@ -20,7 +54,7 @@ export function HomeScreen() {
             <Text variant="bodyMedium">Card content</Text>
           </Card.Content>
         
-          <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
+          <Card.Cover source={{ uri: "/assets/images/cards.png" }} />
           <Card.Actions>
             <Button>Cancel</Button>
             <Button>Ok</Button>
